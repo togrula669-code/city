@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="CityPulse AI - multimodal civic incident intelligence and prototype municipal operations." />
+  <title>CityPulse AI — Urban intelligence platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+  <link href="/src/styles.css" rel="stylesheet" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="/src/main.js" type="module"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a href="#overview" class="brand" aria-label="CityPulse AI home"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-text">CITYPULSE <strong>AI</strong><small>URBAN INTELLIGENCE</small></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a data-page="overview" href="#overview" class="nav-item active"><span data-icon="layout-dashboard"></span> Overview <span class="nav-arrow">›</span></a>
+        <a data-page="report" href="#report" class="nav-item"><span data-icon="plus-circle"></span> Report an issue <span class="nav-arrow">›</span></a>
+        <a data-page="explore" href="#explore" class="nav-item"><span data-icon="map"></span> Incident map <span class="nav-arrow">›</span></a>
+        <a data-page="operations" href="#operations" class="nav-item"><span data-icon="clipboard-list"></span> Operations <span class="nav-arrow">›</span></a>
+      </nav>
+      <div class="side-label tools-label">PLATFORM</div>
+      <nav class="nav" aria-label="Platform navigation"><a data-page="health" href="#health" class="nav-item"><span data-icon="activity"></span> System health <span class="nav-arrow">›</span></a></nav>
+      <div class="sidebar-bottom"><div class="sidebar-glow"><span class="orbit-icon" data-icon="sparkles"></span><strong>AI-powered civic intelligence</strong><p>From citizen evidence to human-reviewed action.</p><a href="#report">Create a report <span>↗</span></a></div><p class="sidebar-foot">CITYPULSE AI · HACKATHON PROTOTYPE<br/>Not connected to real government services.</p></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="topbar-left"><button class="icon-button mobile-menu" id="menuToggle" aria-label="Toggle navigation" data-icon="menu"></button><div class="breadcrumb">WORKSPACE <span>/</span> <strong id="pageBreadcrumb">Overview</strong></div></div><div class="topbar-right"><span class="environment-tag"><i></i> PROTOTYPE ENVIRONMENT</span><span class="status-pill" id="connectionPill"><i></i> Connecting</span><span class="header-avatar" aria-label="User profile">CP</span></div></header>
+      <main id="appMain" tabindex="-1"></main>
+      <footer class="main-footer">CityPulse AI · Baku demo region · All incident submissions stay inside the prototype <span>Made for smarter cities <span class="sparkle">✦</span></span></footer>
+    </div>
+  </div>
+  <div id="drawerRoot"></div><div id="toastRegion" aria-live="polite" aria-atomic="false"></div>
+</body>
+</html>

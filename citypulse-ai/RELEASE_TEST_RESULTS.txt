@@ -1,0 +1,12 @@
+CITYPULSE AI v0.4.1 — LOCAL TEST RESULTS
+
+- npm run verify:frontend: PASSED
+- node --test: 44 passed, 0 failed, 1 skipped (HTTP/Express integration requires npm dependencies)
+- npm run evaluate:duplicates: 12/12 synthetic cases matched expected labels
+- New tests/unit/media-type.test.js: 7/7 passed
+- Real FFmpeg-created MP3/M4A/WebM samples: recognized all 3
+- npm install --offline: UNAVAILABLE (dependency packages not cached in this environment)
+- Live Groq/Gemini: NOT TESTED (no user credentials used)
+- Full HTTP E2E and browser UI: NOT TESTED here
+
+Important: This is an upload format handling fix, not a guarantee that every phone codec or AI model works. Avoid sharing API keys in README or public repositories.

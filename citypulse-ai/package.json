@@ -1,0 +1,30 @@
+{
+  "name": "citypulse-ai",
+  "version": "0.4.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/src/index.js",
+    "dev": "node --watch server/src/index.js",
+    "test": "node --test",
+    "diagnose": "node scripts/diagnose.js",
+    "diagnose:live": "node scripts/diagnose.js --live",
+    "demo:seed": "node scripts/seed-demo.js",
+    "verify:frontend": "node scripts/verify-frontend.js",
+    "groq:models": "node scripts/groq-check.js --models",
+    "groq:test": "node scripts/groq-check.js --smoke",
+    "http:check": "node scripts/http-check.js",
+    "http:live": "node scripts/http-check.js --live",
+    "evaluate:duplicates": "node scripts/evaluate-duplicates.js",
+    "check": "npm run verify:frontend && npm test && npm run evaluate:duplicates"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0"
+  },
+  "description": "CityPulse AI — evidence-aware multimodal urban incident intelligence hackathon MVP"
+}
